@@ -11,7 +11,22 @@ const Navbar = () => {
         <p className="purple-gradient_text">EM</p>
       </NavLink>
       <nav className="flex text-lg gap-7 font-medium">
-        <NavLink to="/about">About</NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive ? 'text-purple-500' : 'text-black-500'
+          }
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/projects"
+          className={({ isActive }) =>
+            isActive ? 'text-purple-500' : 'text-black-500'
+          }
+        >
+          Projects
+        </NavLink>
       </nav>
     </header>
   );
