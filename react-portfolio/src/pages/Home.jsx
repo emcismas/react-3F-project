@@ -3,13 +3,14 @@ import { Canvas } from '@react-three/fiber';
 import Loader from '../components/Loader';
 import Island from '../assets/models/Island';
 import Sky from '../assets/models/Sky';
+import Plane from '../assets/models/Plane';
 const Home = () => {
   const adjustIsland = () => {
     let screenScale = null;
     let screenPosition = [-5, -9.5, -44];
     let rotation = [0.1, 4, 0];
     if (window.innerWidth < 768) {
-      screenScale = [0.2, 0.2, 0.2];
+      // screenScale = [0.2, 0.2, 0.2];
     } else {
       screenScale = [0.025, 0.023, 0.025];
     }
@@ -37,6 +38,7 @@ const Home = () => {
             position={islandPosition}
             rotation={islandRotation}
           />
+          <Plane />
         </Suspense>
       </Canvas>
     </section>
