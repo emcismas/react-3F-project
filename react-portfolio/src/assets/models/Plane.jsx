@@ -1,14 +1,10 @@
 import React from 'react';
 import plane from '../3d/paper_plane.glb';
 import { useGLTF } from '@react-three/drei';
-const Plane = () => {
+const Plane = ({ isRotating, ...props }) => {
   const { scene, animations } = useGLTF(plane);
   return (
-    <mesh
-      position={[-5, 2, 1]}
-      scale={[0.5, 0.5, 0.27]}
-      rotation={[0.1, 1.8, 0.8]}
-    >
+    <mesh {...props}>
       <primitive object={scene} />
     </mesh>
   );

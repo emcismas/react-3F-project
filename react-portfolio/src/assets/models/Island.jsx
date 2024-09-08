@@ -11,9 +11,99 @@ import { useGLTF } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import island from '../3d/island.glb';
 import { a } from '@react-spring/three';
-const Island = (props) => {
+const Island = ({ isRotating, setIsRotating, ...props }) => {
   const islandRef = useRef();
+
+  const { gl, viewport } = useThree();
   const { nodes, materials } = useGLTF(island);
+
+  const lastX = useRef(0);
+  const rotationSpeed = useRef(0);
+  const dampingFactor = 0.95; //how fast/slow will the object rotate
+
+  const handlePointerDown = (e) => {
+    e.stopPropagation(); //stop mouse from doing default stuff, focus only on this method
+    e.preventDefault();
+    setIsRotating(true);
+
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX; //????
+    lastX.current = clientX;
+  };
+
+  const handlePointerUp = (e) => {
+    e.stopPropagation(); //stop mouse from doing default stuff, focus only on this method
+    e.preventDefault();
+    setIsRotating(false);
+  };
+
+  const handlePointerMove = (e) => {
+    e.stopPropagation(); //stop mouse from doing default stuff, focus only on this method
+    e.preventDefault();
+
+    if (isRotating) {
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX; //????
+
+      const delta = (clientX - lastX.current) / viewport.width;
+
+      islandRef.current.rotation.y += delta * 0.01 * Math.PI;
+
+      lastX.current = clientX;
+
+      rotationSpeed.current = delta * 0.01 * Math.PI; ///????? to all of this
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowLeft') {
+      if (!isRotating) setIsRotating(true);
+      islandRef.current.rotation.y += 0.01 * Math.PI;
+    } else if (e.key === 'ArrowRight') {
+      if (!isRotating) setIsRotating(true);
+      islandRef.current.rotation.y -= 0.01 * Math.PI;
+    }
+  };
+
+  const handleKeyUp = (e) => {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+      setIsRotating(false);
+    }
+  };
+
+  useEffect(() => {
+    const canvas = gl.domElement;
+
+    canvas.addEventListener('pointerdown', handlePointerDown);
+    canvas.addEventListener('pointerup', handlePointerUp);
+    canvas.addEventListener('pointermove', handlePointerMove);
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keyup', handleKeyUp);
+
+    return () => {
+      canvas.removeEventListener('pointerdown', handlePointerDown);
+      canvas.removeEventListener('pointerup', handlePointerUp);
+      canvas.removeEventListener('pointermove', handlePointerMove);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keyup', handleKeyUp);
+    };
+  }, [
+    gl,
+    handlePointerDown,
+    handlePointerMove,
+    handlePointerUp,
+    handleKeyDown,
+    handleKeyUp,
+  ]); //hook that will perform function only if array of parameters change value
+
+  useFrame(() => {
+    if (!isRotating) {
+      rotationSpeed.current *= dampingFactor;
+      if (Math.abs(rotationSpeed.current) < 0.001) {
+        rotationSpeed.current = 0;
+      }
+    }
+  });
+
   return (
     <a.group ref={islandRef} {...props} dispose={null}>
       <group position={[24.723, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
