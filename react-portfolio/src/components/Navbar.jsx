@@ -8,21 +8,23 @@ const Navbar = () => {
         to="/"
         className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
       >
-        <p className="purple-gradient_text">EM</p>
+        <p className="text-blue-400">EM</p>
       </NavLink>
       <nav className="flex text-lg gap-7 font-medium">
         <NavLink
           to="/about"
-          className={({ isActive }) =>
-            isActive ? 'text-blue-400' : 'text-black-500'
+          className={
+            (({ isActive }) => (isActive ? 'text-blue-400' : 'text-black-500'),
+            'hover:text-blue-400')
           }
         >
           About
         </NavLink>
         <NavLink
           to="/contact"
-          className={({ isActive }) =>
-            isActive ? 'text-blue-400' : 'text-black-500'
+          className={
+            (({ isActive }) => (isActive ? 'text-blue-400' : 'text-black-500'),
+            'hover:text-blue-400')
           }
         >
           Contact
