@@ -34,8 +34,8 @@ body:has(.card[data-color='green']:hover) {
     @apply font-semibold sm:text-3xl text-xl relative font-poppins;
   }
 
-  .purple-gradient_text {
-    @apply bg-gradient-to-r from-[#bfb5ee] to-[#2f0c95] bg-clip-text text-transparent;
+  .blue-gradient_text {
+    @apply bg-gradient-to-r from-[#97bffa] to-[#0c69f6] bg-clip-text text-transparent;
   }
 
   .input {
