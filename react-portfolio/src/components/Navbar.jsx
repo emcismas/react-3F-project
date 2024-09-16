@@ -18,9 +18,9 @@ const Navbar = () => {
             'hover:text-blue-400')
           }
         >
-          About
+          About Me
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/contact"
           className={
             (({ isActive }) => (isActive ? 'text-blue-400' : 'text-black-500'),
@@ -28,7 +28,7 @@ const Navbar = () => {
           }
         >
           Contact
-        </NavLink>
+        </NavLink> */}
       </nav>
     </header>
   );
