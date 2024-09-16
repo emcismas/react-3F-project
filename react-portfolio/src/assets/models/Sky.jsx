@@ -5,7 +5,7 @@ const Sky = () => {
   const skyScene = useGLTF(sky);
 
   return (
-    <mesh>
+    <mesh position={[1, -20, 80]}>
       <primitive object={skyScene.scene} />
     </mesh>
   );
