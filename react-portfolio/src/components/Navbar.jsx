@@ -10,7 +10,7 @@ const Navbar = () => {
       >
         <p className="purple-gradient_text">EM</p>
       </NavLink>
-      <nav className="flex text-lg gap-7 font-medium">
+      <nav className="flex text-lg  font-medium">
         <NavLink
           to="/about"
           className={
@@ -31,6 +31,13 @@ const Navbar = () => {
           Contact
         </NavLink> */}
       </nav>
+
+      <NavLink
+        className="flex m-0 p-0 w-10 "
+        to="https://github.com/emcismas?tab=repositories"
+      >
+        <img src="src\assets\icons\github.png" className="w-10 m-0 p-0 " />
+      </NavLink>
     </header>
   );
 };

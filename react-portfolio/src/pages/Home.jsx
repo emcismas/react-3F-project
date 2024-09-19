@@ -5,14 +5,14 @@ import Island from '../assets/models/Island';
 import Sky from '../assets/models/Sky';
 import Plane from '../assets/models/Plane';
 const Home = () => {
-  const [isRotating, setIsRotating] = useState(false);
+  const [isRotating, setIsRotating] = useState(true);
 
   const adjustIsland = () => {
     let screenScale = null;
-    let screenPosition = [-5, -9.5, -44];
-    let rotation = [0.1, 4, 0];
+    let screenPosition = [-5, -8.5, -40];
+    let rotation = [0.1, 3.95, 0];
     if (window.innerWidth < 768) {
-      // screenScale = [0.2, 0.2, 0.2];
+      screenScale = [0.01, 0.01, 0.01];
     } else {
       screenScale = [0.025, 0.023, 0.025];
     }
@@ -22,10 +22,10 @@ const Home = () => {
 
   const adjustPlane = () => {
     let screenScale = null;
-    let screenPosition = [-30, 10, -30];
+    let screenPosition = [-30, 15, -30];
     let rotation = [0.3, 1.1, 0.7];
     if (window.innerWidth < 768) {
-      // screenScale = [0.2, 0.2, 0.2];
+      screenScale = [1, 2, 2];
     } else {
       screenScale = [2, 3, 3];
     }
@@ -42,7 +42,7 @@ const Home = () => {
         className={`w-full h-screen bg-transparent ${
           isRotating ? 'cursor-grabbing' : 'cursor-grab'
         }`}
-        camera={{ near: 30, far: 1000 }}
+        camera={{ near: 25, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
           <directionalLight position={[10, 1, 1]} intensity={3} />
