@@ -5,7 +5,7 @@ import Island from '../assets/models/Island';
 import Sky from '../assets/models/Sky';
 import Plane from '../assets/models/Plane';
 const Home = () => {
-  const [isRotating, setIsRotating] = useState(true);
+  const [isRotating, setIsRotating] = useState(false);
 
   const adjustIsland = () => {
     let screenScale = null;

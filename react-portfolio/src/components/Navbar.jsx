@@ -10,34 +10,27 @@ const Navbar = () => {
       >
         <p className="purple-gradient_text">EM</p>
       </NavLink>
-      <nav className="flex text-lg  font-medium">
+      <nav className="flex text-lg gap-7 font-medium">
         <NavLink
           to="/about"
           className={
             (({ isActive }) =>
-              isActive ? 'text-purple-500' : 'text-black-500',
-            'hover:text-purple-400')
+              isActive ? 'text-purple-500  ' : 'text-purple-50',
+            'hover:text-purple-400  ')
           }
         >
           About Me
         </NavLink>
-        {/* <NavLink
+        <NavLink
           to="/contact"
           className={
-            (({ isActive }) => (isActive ? 'text-blue-400' : 'text-black-500'),
-            'hover:text-blue-400')
+            (({ isActive }) => (isActive ? 'text-purple-500' : 'text-white'),
+            'hover:text-purple-400')
           }
         >
           Contact
-        </NavLink> */}
+        </NavLink>
       </nav>
-
-      <NavLink
-        className="flex m-0 p-0 w-10 "
-        to="https://github.com/emcismas?tab=repositories"
-      >
-        <img src="src\assets\icons\github.png" className="w-10 m-0 p-0 " />
-      </NavLink>
     </header>
   );
 };

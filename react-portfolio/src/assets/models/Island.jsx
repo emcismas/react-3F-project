@@ -19,29 +19,29 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
 
   const lastX = useRef(0);
   const rotationSpeed = useRef(0);
-  const dampingFactor = 0.95; //how fast/slow will the object rotate
+  const dampingFactor = 0.95;
 
   const handlePointerDown = (e) => {
-    e.stopPropagation(); //stop mouse from doing default stuff, focus only on this method
+    e.stopPropagation();
     e.preventDefault();
     setIsRotating(true);
 
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX; //????
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     lastX.current = clientX;
   };
 
   const handlePointerUp = (e) => {
-    e.stopPropagation(); //stop mouse from doing default stuff, focus only on this method
+    e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
   };
 
   const handlePointerMove = (e) => {
-    e.stopPropagation(); //stop mouse from doing default stuff, focus only on this method
+    e.stopPropagation();
     e.preventDefault();
 
     if (isRotating) {
-      const clientX = e.touches ? e.touches[0].clientX : e.clientX; //????
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
 
       const delta = (clientX - lastX.current) / viewport.width;
 
@@ -49,7 +49,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
 
       lastX.current = clientX;
 
-      rotationSpeed.current = delta * 0.01 * Math.PI; ///????? to all of this
+      rotationSpeed.current = delta * 0.01 * Math.PI;
     }
   };
 
@@ -93,7 +93,7 @@ const Island = ({ isRotating, setIsRotating, ...props }) => {
     handlePointerUp,
     handleKeyDown,
     handleKeyUp,
-  ]); //hook that will perform function only if array of parameters change value
+  ]);
 
   useFrame(() => {
     if (!isRotating) {
