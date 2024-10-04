@@ -5,7 +5,7 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 const App = () => {
   return (
-    <main className="bg-slate-300/20">
+    <main className="bg-slate-300/15">
       <Router>
         <Navbar />
         <Routes>

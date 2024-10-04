@@ -8,7 +8,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 const About = () => {
   return (
-    <section className="max-container">
+    <section className="max-container ">
       <h1 className="head-text">
         Hi, I'm{' '}
         <span className="purple-gradient_text font-semibold drop-shadow">

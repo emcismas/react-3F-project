@@ -13,19 +13,16 @@ const Navbar = () => {
       <nav className="flex text-lg gap-7 font-medium">
         <NavLink
           to="/about"
-          className={
-            (({ isActive }) =>
-              isActive ? 'text-purple-500  ' : 'text-purple-50',
-            'hover:text-purple-400  ')
+          className={({ isActive }) =>
+            isActive ? 'text-purple-500' : 'text-white'
           }
         >
           About Me
         </NavLink>
         <NavLink
           to="/contact"
-          className={
-            (({ isActive }) => (isActive ? 'text-purple-500' : 'text-white'),
-            'hover:text-purple-400')
+          className={({ isActive }) =>
+            isActive ? 'text-purple-500' : 'text-white'
           }
         >
           Contact
