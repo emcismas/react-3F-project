@@ -4,18 +4,20 @@ import Loader from '../components/Loader';
 import Island from '../assets/models/Island';
 import Sky from '../assets/models/Sky';
 import Plane from '../assets/models/Plane';
+import HomeInfo from '../components/HomeInfo';
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
+  const [currentStage, setCurrentStage] = useState(1);
 
   const adjustIsland = () => {
     let screenScale = null;
-    let screenPosition = [-5, -8.5, -40];
+    let screenPosition = [-3, -13, -40];
     let rotation = [0.1, 3.95, 0];
     if (window.innerWidth < 768) {
       screenScale = [0.01, 0.01, 0.01];
     } else {
-      screenScale = [0.025, 0.023, 0.025];
+      screenScale = [0.023, 0.022, 0.023];
     }
 
     return [screenScale, screenPosition, rotation];
@@ -40,7 +42,7 @@ const Home = () => {
   return (
     <section className="w-full h-screen relative">
       <div className="absolute top-28 left-0 right-0 z-10 flex items-center  justify-center">
-        POPUP
+        {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
       <Canvas
         className={`w-full h-screen bg-transparent ${
@@ -63,6 +65,7 @@ const Home = () => {
             rotation={islandRotation}
             isRotating={isRotating}
             setIsRotating={setIsRotating}
+            setCurrentStage={setCurrentStage}
           />
           {/* <Plane
             scale={planeScale}
