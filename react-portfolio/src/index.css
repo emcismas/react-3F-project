@@ -34,7 +34,7 @@ body {
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-xl text-box pt-4 pb-12 px-8;
+    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
   }
 }
 
@@ -114,13 +114,4 @@ body {
 
 .block-container:hover > .btn-front {
   transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
-}
-
-.text-box {
-  background: #910b9d;
-  position: relative;
-  border-radius: 10px;
-  border: #be05d3;
-  box-shadow: 0.6vmin 0.6vmin #a505c1, 1vmin 1vmin #a505c1, 1vmin 1vmin #a505c1,
-    0.65vmin 1vmin #a505c1, 1vmin 0.65vmin #a505c1;
 }
