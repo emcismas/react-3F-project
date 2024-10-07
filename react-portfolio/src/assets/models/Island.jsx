@@ -509,20 +509,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
               material={materials.pondasi_bangunan_2}
             />
           </group>
-          <group
-            position={[-19.274, 996.125, -83.09]}
-            rotation={[-Math.PI / 2, 0, 0]}
-            scale={[43.026, 43.026, 100]}
-          >
-            <mesh
-              geometry={nodes.balon_udara_panas_papan__rumah_2_no_1_0.geometry}
-              material={materials.papan__rumah_2_no_1}
-            />
-            <mesh
-              geometry={nodes.balon_udara_panas_a_0.geometry}
-              material={materials.material}
-            />
-          </group>
+
           <group
             position={[122.384, 1348.282, 1786.224]}
             rotation={[-Math.PI / 2, 0, 0]}
@@ -5677,13 +5664,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
             rotation={[Math.PI / 2, 0, 0]}
             scale={[-197.988, 197.988, 197.988]}
           />
-          <mesh
-            geometry={nodes.Icosphere020__0.geometry}
-            material={materials['Icosphere.010__0']}
-            position={[631.863, -431.275, 353.547]}
-            rotation={[Math.PI / 2, 0, 0]}
-            scale={[-204.857, 204.857, 204.857]}
-          />
+
           <mesh
             geometry={nodes.Icosphere021__0.geometry}
             material={materials['Icosphere.010__0']}
@@ -5746,34 +5727,6 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
             position={[-595.841, 131.026, 1000.396]}
             rotation={[Math.PI / 2, 0, -Math.PI / 2]}
             scale={[-138.046, 138.046, 138.046]}
-          />
-          <mesh
-            geometry={nodes.Icosphere030__0.geometry}
-            material={materials['Icosphere.010__0']}
-            position={[-747.966, 314.593, 919.807]}
-            rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-            scale={[-138.046, 138.046, 138.046]}
-          />
-          <mesh
-            geometry={nodes.Icosphere031__0.geometry}
-            material={materials['Icosphere.010__0']}
-            position={[-1096.166, 129.753, 1041.149]}
-            rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-            scale={[-138.046, 138.046, 138.046]}
-          />
-          <mesh
-            geometry={nodes.Icosphere032__0.geometry}
-            material={materials['Icosphere.010__0']}
-            position={[-902.735, 290.025, 1324.468]}
-            rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-            scale={[-138.046, 138.046, 138.046]}
-          />
-          <mesh
-            geometry={nodes.Icosphere033__0.geometry}
-            material={materials['Icosphere.010__0']}
-            position={[-821.666, 436.485, 1369.323]}
-            rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-            scale={[-72.572, 72.572, 72.572]}
           />
         </group>
       </group>
