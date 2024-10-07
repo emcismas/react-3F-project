@@ -31,6 +31,9 @@ body {
   @apply mx-5 relative flex text-white flex-col gap-3 max-w-xl text-box pt-4 pb-12 px-8;
 }
 
+.pop-btn {
+  @apply py-3 px-6 rounded-lg text-purple-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+}
 .logo {
   border-radius: 8.889px;
   background: #fff;
@@ -45,4 +48,11 @@ body {
   border: #be05d3;
   box-shadow: 0.6vmin 0.6vmin #a505c1, 1vmin 1vmin #a505c1, 1vmin 1vmin #a505c1,
     0.65vmin 1vmin #a505c1, 1vmin 0.65vmin #a505c1;
+}
+
+.pop-white {
+  background: #fff;
+  border: #fff;
+  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #ebb1f0, 1vmin 1vmin #ebb1f0,
+    0.65vmin 1vmin #ebb1f0, 1vmin 0.65vmin #ebb1f0;
 }

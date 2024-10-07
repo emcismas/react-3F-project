@@ -12,12 +12,12 @@ const Home = () => {
 
   const adjustIsland = () => {
     let screenScale = null;
-    let screenPosition = [-3, -13, -40];
+    let screenPosition = [-3, -10, -40];
     let rotation = [0.1, 3.95, 0];
     if (window.innerWidth < 768) {
-      screenScale = [0.01, 0.01, 0.01];
+      screenScale = [0.02, 0.02, 0.0];
     } else {
-      screenScale = [0.023, 0.022, 0.023];
+      screenScale = [0.022, 0.025, 0.025];
     }
 
     return [screenScale, screenPosition, rotation];
@@ -25,18 +25,19 @@ const Home = () => {
 
   // const adjustPlane = () => {
   //   let screenScale = null;
-  //   let screenPosition = [-30, 15, -30];
-  //   let rotation = [0.3, 1.1, 0.7];
+  //   let screenPosition = [-53, 15, -30];
+  //   let rotation = [0.3, 1.5, 0.6];
   //   if (window.innerWidth < 768) {
   //     screenScale = [1, 2, 2];
   //   } else {
-  //     screenScale = [2, 3, 3];
+  //     screenScale = [2, 2.9, 2.8];
   //   }
 
   //   return [screenScale, screenPosition, rotation];
   // };
 
   // const [planeScale, planePosition, planeRotation] = adjustPlane();
+
   const [islandScale, islandPosition, islandRotation] = adjustIsland();
 
   return (

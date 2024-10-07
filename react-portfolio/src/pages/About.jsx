@@ -18,13 +18,13 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500 text-xl">
         <p>
-          Web Application Developer, passionate about creating captivating user
-          experiences.
+          Web Application Developer, experienced in front-end development and
+          automation testing.
         </p>
       </div>
 
       <div className="py-10 flex flex-col">
-        <h3 className="subhead-text">Some of my skills are </h3>
+        <h3 className="subhead-text">My skills are </h3>
 
         <div className="mt-16 flex flex-wrap gap-8 ">
           {skills.map((skill) => (

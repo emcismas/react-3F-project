@@ -1,27 +1,22 @@
 export const skills = [
   {
-    imageUrl: 'src/assets/icons/javascript.png',
-    name: 'JavaScript',
-    type: 'Frontend',
-  },
-  {
-    imageUrl: 'src/assets/icons/vue.png',
-    name: 'Vue',
-    type: 'Frontend',
-  },
-  {
     imageUrl: 'src/assets/icons/react.png',
     name: 'React',
     type: 'Frontend',
   },
   {
-    imageUrl: 'src/assets/icons/tailwind.png',
-    name: 'TailWind',
+    imageUrl: 'src/assets/icons/three.svg',
+    name: 'Three.js',
     type: 'Frontend',
   },
   {
-    imageUrl: 'src/assets/icons/adobe-xd.png',
-    name: 'Adobe XD',
+    imageUrl: 'src/assets/icons/vue.png',
+    name: 'Vue.js',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: 'src/assets/icons/javascript.png',
+    name: 'JavaScript',
     type: 'Frontend',
   },
   {
@@ -35,9 +30,29 @@ export const skills = [
     type: 'Automated Testing',
   },
   {
-    imageUrl: 'src/assets/icons/git.png',
+    imageUrl: 'src/assets/icons/css.png',
     name: 'Git',
     type: 'Version Control',
+  },
+  {
+    imageUrl: 'src/assets/icons/tailwind.png',
+    name: 'Adobe XD',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: 'src/assets/icons/sql.png',
+    name: 'Adobe XD',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: 'src/assets/icons/python.png',
+    name: 'Adobe XD',
+    type: 'Frontend',
+  },
+  {
+    imageUrl: 'src/assets/icons/git.png',
+    name: 'Adobe XD',
+    type: 'Frontend',
   },
 ];
 

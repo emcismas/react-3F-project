@@ -7,7 +7,7 @@ const InfoBox = ({ text, link, btnText }) => (
   <div className="info-box">
     <p className="font-medium sm:text-xl text-center">{text}</p>
 
-    <Link to={link} className="">
+    <Link to={link} className="pop-white pop-btn">
       {btnText}
     </Link>
   </div>
@@ -19,24 +19,25 @@ const renderContent = {
       className="sm:text-xl sm:leading-snug text-center
     text-box py-4 px-8 text-white mx-5"
     >
-      Hi, I'm <span className="font-semibold"> Ema </span>
+      Hi, I'm <span className="font-semibold"> Ema! </span>
+      <br></br>
+      I'm a Web Developer based in Timisoara.
     </h1>
   ),
   2: (
     <InfoBox
-      text="Studied Software Development for 5 years and picked up many skills along the way"
+      text="I started my programmer journey a few years back,  and I've picked up a passion for creating exciting user experiences. "
       link="/about"
-      btnText="Learn more"
+      btnText="Learn more about me"
     />
   ),
   3: (
     <InfoBox
-      text="Looking for a developer?"
+      text="Are you looking for a developer?"
       link="/contact"
       btnText="Contact me"
     />
   ),
-  4: <h1></h1>,
 };
 
 const HomeInfo = ({ currentStage }) => {

@@ -53,22 +53,6 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     }
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'ArrowLeft') {
-      if (!isRotating) setIsRotating(true);
-      islandRef.current.rotation.y += 0.01 * Math.PI;
-    } else if (e.key === 'ArrowRight') {
-      if (!isRotating) setIsRotating(true);
-      islandRef.current.rotation.y -= 0.01 * Math.PI;
-    }
-  };
-
-  const handleKeyUp = (e) => {
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-      setIsRotating(false);
-    }
-  };
-
   useEffect(() => {
     const canvas = gl.domElement;
 
@@ -76,24 +60,12 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     canvas.addEventListener('pointerup', handlePointerUp);
     canvas.addEventListener('pointermove', handlePointerMove);
 
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('keyup', handleKeyUp);
-
     return () => {
       canvas.removeEventListener('pointerdown', handlePointerDown);
       canvas.removeEventListener('pointerup', handlePointerUp);
       canvas.removeEventListener('pointermove', handlePointerMove);
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('keyup', handleKeyUp);
     };
-  }, [
-    gl,
-    handlePointerDown,
-    handlePointerMove,
-    handlePointerUp,
-    handleKeyDown,
-    handleKeyUp,
-  ]);
+  }, [gl, handlePointerDown, handlePointerMove, handlePointerUp]);
 
   useFrame(() => {
     if (!isRotating) {
@@ -108,16 +80,13 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
 
         // Set the current stage based on the island's orientation
         switch (true) {
-          case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
-            setCurrentStage(4);
-            break;
-          case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+          case normalizedRotation >= 0.1 && normalizedRotation <= 1.99:
             setCurrentStage(3);
             break;
-          case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+          case normalizedRotation >= 2 && normalizedRotation <= 3.99:
             setCurrentStage(2);
             break;
-          case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
+          case normalizedRotation >= 4 && normalizedRotation <= 6.2:
             setCurrentStage(1);
             break;
           default:
@@ -5686,13 +5655,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
             rotation={[Math.PI / 2, 0, 0]}
             scale={[-111.271, 111.271, 111.271]}
           />
-          <mesh
-            geometry={nodes.Icosphere024__0.geometry}
-            material={materials['Icosphere.010__0']}
-            position={[370.862, -251.574, -721.442]}
-            rotation={[Math.PI / 2, 0, 0]}
-            scale={[-111.271, 111.271, 111.271]}
-          />
+
           <mesh
             geometry={nodes.Icosphere025__0.geometry}
             material={materials['Icosphere.010__0']}
