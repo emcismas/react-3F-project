@@ -23,24 +23,24 @@ const Home = () => {
     return [screenScale, screenPosition, rotation];
   };
 
-  const adjustPlane = () => {
-    let screenScale = null;
-    let screenPosition = [-30, 15, -30];
-    let rotation = [0.3, 1.1, 0.7];
-    if (window.innerWidth < 768) {
-      screenScale = [1, 2, 2];
-    } else {
-      screenScale = [2, 3, 3];
-    }
+  // const adjustPlane = () => {
+  //   let screenScale = null;
+  //   let screenPosition = [-30, 15, -30];
+  //   let rotation = [0.3, 1.1, 0.7];
+  //   if (window.innerWidth < 768) {
+  //     screenScale = [1, 2, 2];
+  //   } else {
+  //     screenScale = [2, 3, 3];
+  //   }
 
-    return [screenScale, screenPosition, rotation];
-  };
+  //   return [screenScale, screenPosition, rotation];
+  // };
 
-  const [planeScale, planePosition, planeRotation] = adjustPlane();
+  // const [planeScale, planePosition, planeRotation] = adjustPlane();
   const [islandScale, islandPosition, islandRotation] = adjustIsland();
 
   return (
-    <section className="w-full h-screen relative">
+    <section className="w-screen h-screen relative">
       <div className="absolute top-28 left-0 right-0 z-10 flex items-center  justify-center">
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>

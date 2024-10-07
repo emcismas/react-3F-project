@@ -613,20 +613,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
               material={materials.buah}
             />
           </group>
-          <group
-            position={[-19.274, 996.125, -83.09]}
-            rotation={[-Math.PI / 2, 0, 0]}
-            scale={[43.026, 43.026, 100]}
-          >
-            <mesh
-              geometry={nodes.balon_udara_panas007_Material002_0.geometry}
-              material={materials['Material.002']}
-            />
-            <mesh
-              geometry={nodes.balon_udara_panas007_a_0.geometry}
-              material={materials.material}
-            />
-          </group>
+
           <group
             position={[-284.612, 532.455, -356.593]}
             rotation={[0, Math.PI / 2, 0]}
@@ -653,32 +640,7 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
               material={materials.papan__rumah_2_no_1}
             />
           </group>
-          <group
-            position={[-521.631, 276.434, -180.049]}
-            rotation={[Math.PI, 0, -Math.PI]}
-            scale={[-6.813, 23.278, 3.386]}
-          >
-            <mesh
-              geometry={nodes.rumah_3018_papan_rumah_2_no_3_0.geometry}
-              material={materials.papan_rumah_2_no_3}
-            />
-            <mesh
-              geometry={nodes.rumah_3018_atap_2_0.geometry}
-              material={materials.atap_2}
-            />
-            <mesh
-              geometry={nodes.rumah_3018_papan__rumah_2_no_1_0.geometry}
-              material={materials.papan__rumah_2_no_1}
-            />
-            <mesh
-              geometry={nodes.rumah_3018_pondasi_bangunan_0.geometry}
-              material={materials.pondasi_bangunan}
-            />
-            <mesh
-              geometry={nodes.rumah_3018_papan_rumah_2_no_2_0.geometry}
-              material={materials.papan_rumah_2_no_2}
-            />
-          </group>
+
           <group
             position={[128.3, 617.365, -481.422]}
             rotation={[-Math.PI / 2, 0, 0]}
