@@ -18,8 +18,7 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500 text-xl">
         <p>
-          Web Application Developer, experienced in front-end development and
-          automation testing.
+          Data Engineer / Web Developer, curious about everything data, development and emerging technologies. 
         </p>
       </div>
 
@@ -55,7 +54,7 @@ const About = () => {
                 icon={
                   <div className="flex justify-center items-center w-full h-full">
                     <img
-                      src="src\assets\icons\work.png"
+                      src="\icons\work.png"
                       className="w-4/6 h-4/6 flex object-contain"
                     />
                   </div>
@@ -103,7 +102,7 @@ const About = () => {
                 icon={
                   <div className="flex justify-center items-center w-full h-full">
                     <img
-                      src="src\assets\icons\education.png"
+                      src="\icons\education.png"
                       className="w-4/6 h-4/6 flex object-contain"
                     />
                   </div>

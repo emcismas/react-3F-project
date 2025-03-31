@@ -52,7 +52,7 @@ const Contact = () => {
               type="text"
               name="name"
               className="input"
-              placeholder="John Doe"
+              placeholder="Your Name"
               required
               value={form.name}
               onChange={handleChange}
@@ -66,7 +66,7 @@ const Contact = () => {
               type="email"
               name="email"
               className="input"
-              placeholder="john.doe@gmail.com"
+              placeholder="your.email@gmail.com"
               required
               value={form.email}
               onChange={handleChange}
@@ -81,7 +81,7 @@ const Contact = () => {
               type="text"
               name="message"
               className="textarea"
-              placeholder="Let me know more about your project!"
+              placeholder="Message"
               required
               value={form.message}
               onChange={handleChange}

@@ -3,8 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import Loader from '../components/Loader';
 import Island from '../assets/models/Island';
 import Sky from '../assets/models/Sky';
-import Plane from '../assets/models/Plane';
 import HomeInfo from '../components/HomeInfo';
+import Hint from '../components/Hint';
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -23,27 +23,15 @@ const Home = () => {
     return [screenScale, screenPosition, rotation];
   };
 
-  // const adjustPlane = () => {
-  //   let screenScale = null;
-  //   let screenPosition = [-53, 15, -30];
-  //   let rotation = [0.3, 1.5, 0.6];
-  //   if (window.innerWidth < 768) {
-  //     screenScale = [1, 2, 2];
-  //   } else {
-  //     screenScale = [2, 2.9, 2.8];
-  //   }
-
-  //   return [screenScale, screenPosition, rotation];
-  // };
-
-  // const [planeScale, planePosition, planeRotation] = adjustPlane();
-
   const [islandScale, islandPosition, islandRotation] = adjustIsland();
 
   return (
     <section className="w-screen h-screen relative">
       <div className="absolute top-20 left-0 right-0 z-10 flex items-center  justify-center">
+        
         {currentStage && <HomeInfo currentStage={currentStage} />}
+        <Hint/>
+        
       </div>
       <Canvas
         className={`w-full h-screen bg-transparent ${
@@ -68,12 +56,7 @@ const Home = () => {
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
           />
-          {/* <Plane
-            scale={planeScale}
-            position={planePosition}
-            rotation={planeRotation}
-            isRotating={isRotating}
-          /> */}
+        
         </Suspense>
       </Canvas>
     </section>
