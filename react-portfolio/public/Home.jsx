@@ -31,7 +31,7 @@ const Home = () => {
         
         {currentStage && <HomeInfo currentStage={currentStage} />}
         <Hint/>
-        
+        // TODO: make it react to visible prop 
       </div>
       <Canvas
         className={`w-full h-screen bg-transparent ${
